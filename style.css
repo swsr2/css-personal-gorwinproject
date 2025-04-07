@@ -1,82 +1,100 @@
-body{
+    body {
     margin: 0;
     font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
-}
-nav{
-    height: 80px;
-    background-color:white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.nav-item a{
+    }
+
+    nav.navbar {
+    position: relative;
+    z-index: 10;
+    }
+
+    .navbar-collapse {
+    position: static !important;
+    }
+
+    .collapse:not(.show) {
+    display: none !important;
+    }
+
+    main {
+    position: relative;
+    z-index: 1;
+    }
+
+    .nav-link {
     font-weight: 600;
     font-size: large;
-}
-.nav-item a:hover{
-    color: #3FA66F
-}
+    }
 
-.login{
+    .nav-link:hover {
+    color: #3FA66F;
+    }
+
+    .login {
     display: flex;
     justify-content: flex-end;
     margin: 10px;
-    padding: 0 12px; 
-}
-.login a{
-    text-decoration: none;
-    color:black;
-}
-.login a:hover{
-    color: #3FA66F;
-}
+    padding: 0 12px;
+    }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.6); 
+    .login a {
+    text-decoration: none;
+    color: black;
+    }
+
+    .login a:hover {
+    color: #3FA66F;
+    }
+
+    .carousel-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 600px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     background-size: 60% 60%;
     background-position: center;
     background-repeat: no-repeat;
-}
+    }
 
-
-.carousel-control-prev,
-.carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
     width: 5%;
-}
+    }
 
-
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.85);
-}
+    }
 
-
-.carousel-indicators [data-bs-target] {
+    .carousel-indicators [data-bs-target] {
     width: 12px;
     height: 12px;
-    background-color: #bbb;  
+    background-color: #bbb;
     border-radius: 50%;
     border: none;
     opacity: 0.7;
     transition: all 0.3s ease;
     margin: 0 6px;
-}
+    }
 
-
-.carousel-indicators .active {
-    background-color: #3FA66F; 
+    .carousel-indicators .active {
+    background-color: #3FA66F;
     width: 14px;
     height: 14px;
     opacity: 1;
-}
+    }
 
-
-.carousel-indicators [data-bs-target]:hover {
+    .carousel-indicators [data-bs-target]:hover {
     background-color: #2e8a5b;
     opacity: 1;
-}
+    }
 
 .footer{
     bottom: 0;
@@ -104,7 +122,7 @@ nav{
 }
 .sub-title {
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 600;
     margin: 20px 0px;
 }
 .footer-menu-item {
@@ -144,16 +162,17 @@ nav{
     display: flex;
 }
 
-ul{
+.footer ul{
     display: flex;
     list-style: none;
     margin:0;
     padding:0;
 }
-li{
+.footer li{
     margin-right:30px;
 
 }
+
 .menus li{
     margin:30px 30px;
 
@@ -186,16 +205,6 @@ li{
         width: 100%;
         justify-content: center;
     }
-    .second-logo{
-        display: none;
-    }
-
-    /* 수정 */
-    .menus li{
-        margin: 0;
-        padding: 0 15px;
-        text-align: left;
-    }
 }
 
 @media(max-width:600px) {
@@ -216,5 +225,8 @@ li{
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .second-logo{
+        display: none;
     }
 }
